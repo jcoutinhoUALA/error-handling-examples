@@ -12,6 +12,10 @@ func operation2() (string, customErrors) {
 	return "operation2 result", &harmlessError{}
 }
 
+func operation3() (string, customErrors) {
+	return "operation3 result", nil
+}
+
 func main() {
 	// Nombrando siempre a los errores como err, nos "obliga" a hacer un tratamiento inmediato de los errores (recomendación de go)
 	// Durante la ejecución en una función, la variable err puede ser reutilizada o reasignada N veces
