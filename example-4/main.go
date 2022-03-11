@@ -13,7 +13,7 @@ func harmless() customErrors {
 func main() {
 	err := boom()
 	// Si no declaro los errores custom como punteros, no puedo discriminarlos correctamente por type assertions
-	if _, isBoomError := err.(harmlessError); isBoomError {
+	if _, isBoomError := err.(boomError); isBoomError {
 		fmt.Printf("Boom error occurred!: %s \n", err)
 		fmt.Printf("Error detail: %s", err.GetMsgDetail())
 	} else {
